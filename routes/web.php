@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IncomeController;
-use App\Http\Controllers\ExpenseController; // Import the ExpenseController
+use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\RecordController;
 
 Route::get('/', function () {
