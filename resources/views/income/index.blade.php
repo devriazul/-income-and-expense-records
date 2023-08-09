@@ -3,25 +3,26 @@
 @section('content')
     <div class="container">
         <h2>Income Records</h2>
+
         <table class="table">
             <thead>
                 <tr>
                     <th>Date</th>
-                    <th>Description</th>
                     <th>Amount</th>
-                    <!-- other columns -->
+                    <th>Description</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($incomes as $income)
-                <tr>
-                    <td>{{ $income->date }}</td>
-                    <td>{{ $income->description }}</td>
-                    <td>{{ $income->amount }}</td>
-                    <!-- other columns -->
-                </tr>
+                @foreach ($incomes as $income)
+                    <tr>
+                        <td>{{ $income->date }}</td>
+                        <td>{{ $income->amount }}</td>
+                        <td>{{ $income->description }}</td>
+                    </tr>
                 @endforeach
             </tbody>
         </table>
+
+        {{ $incomes->links() }} <!-- Display pagination links -->
     </div>
 @endsection
